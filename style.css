@@ -1,0 +1,245 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset all margins, paddings, and box-sizing for all elements.
+Set the default font family for all elements to Poppins. */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Set the background color to a light pastel color and the font color to white.
+Hide any overflow beyond the viewport. */
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #f7eae2;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Set the color of highlighted text and background to be more visible. */
+::selection{
+  color: #fff;
+  background: #282834;
+}
+
+/* Center the content of the page using margin and padding.
+Set the background color of the wrapper to a dark shade.
+Add a subtle shadow to the wrapper. */
+.wrapper{
+  max-width: 405px;
+  padding: 28px 0 30px;
+  margin: 137px auto;
+  background: #15141a;
+  border-radius: 7px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Set the height and padding of the task input area.
+Make it relative to its parent. */
+.task-input{
+  height: 52px;
+  padding: 0 25px;
+  position: relative;
+}
+
+/* Position the icon inside the task input area. */
+.task-input img{
+  top: 50%;
+  position: absolute;
+  transform: translate(17px, -50%);
+}
+
+/* Set the properties of the task input area.
+Set the color and background of the input field.
+Add padding to the left of the input field to make room for the icon. */
+.task-input input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 53px;
+  border: none;
+  color: #fff;
+  background: #282834;
+}
+
+/* Set the color of the placeholder text. */
+.task-input input::placeholder {
+    color: #bfbfbf;
+}
+
+/* Set the display to flex for the control area and each task item. 
+Align the items vertically and horizontally with space between. */
+.controls, li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Set the padding and border properties for the control area. */
+.controls {
+    padding: 18px 25px;
+    border-bottom: 2px solid #282834;
+}
+
+/* Set the cursor to a pointer and the margin, color, and font size of the filter options. */
+.filters span {
+    cursor: pointer;
+    margin: 0 8px;
+    color: #282834;
+    font-size: 17px;
+}
+
+/* Remove the left margin of the first filter option. */
+.filters span:first-child {
+    margin-left: 0;
+}
+
+.filters span.active {
+    color: #fff;
+}
+
+.controls .clear-btn {
+    outline: none;
+    border: none;
+    color: #15141a;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 7px 13px;
+    background: #e3fbaf;
+}
+
+.task-box {
+    margin: 20px 25px;
+}
+
+.task-box .task {
+    list-style: none;
+    font-size: 17px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    padding: 10px;
+    background: #282834;
+}
+
+.task-box .task:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.task label {
+    display: flex;
+    align-items: flex-start;
+}
+
+.task label input {
+    margin-top: 6px;
+    accent-color: #e3fbaf;
+}
+
+.task label input[type="checkbox"] {
+    transform: scale(1.2); 
+}
+
+.task label p {
+    user-select: none;
+    margin-left: 12px;
+    word-wrap: break-word;
+}
+
+.task label p.checked {
+    text-decoration: line-through;
+}
+
+.task-box .settings {
+    position: relative;
+}
+
+.settings :where(i, li){
+    cursor: pointer;
+}
+
+.settings .task-menu {
+    position: absolute;
+    padding: 5px 0;
+    right: -5px;
+    bottom: -65px;
+    z-index: 2;
+    transform: scale(0);
+    border-radius: 5px;
+    background: #15141a;
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.task-box .task:last-child .task-menu {
+    bottom: 0;
+    transform-origin: bottom right;
+}
+.task-box .task:first-child .task-menu {
+    bottom: -65px;
+    transform-origin: top right;
+}
+
+.settings:hover .task-menu {
+    transform: scale(1);
+}
+
+.task-menu.show {
+    transform: scale(1);
+}
+
+.task-menu li {
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 15px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+
+.task-menu li:last-child{
+    margin-bottom: 0;
+}
+
+.task-menu li:hover {
+    background: #282834;
+}
+.settings li i {
+    padding-right: 8px;
+}
+
+@media (max-width: 400px) {
+    body{
+      padding: 0 10px;
+    }
+    .wrapper {
+      padding: 20px 0;
+    }
+    .filters span{
+      margin: 0 5px;
+    }
+    .task-input{
+      padding: 0 20px;
+    }
+    .controls{
+      padding: 18px 20px;
+    }
+    .task-box{
+      margin-top: 20px;
+      margin-right: 5px;
+      padding: 0 15px 10px 20px;
+    }
+    .task label input{
+      margin-top: 4px;
+    }
+  }
