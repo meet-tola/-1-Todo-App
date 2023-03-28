@@ -1,4 +1,10 @@
-# -1-Todo-App
+
+
+
+  <h2 align="center">JavaScript 100 Projects</h2>
+
+
+# - Day 1-Todo-App
 I have developed a to-do list application that utilizes local storage to store your tasks. This app allows you to easily add, edit, and delete your to-dos.
 
 In addition, you can view your pending to-dos and completed to-dos separately, making it easy to keep track of your progress.
