@@ -8,4 +8,4 @@ The local storage feature ensures that your to-dos are saved even when you close
 With this user-friendly and convenient to-do list app, you can stay organized and on top of your tasks with ease.
 
 ### Live demo
-![live demos](https://meet-tola.github.io/-1-Todo-App/)
+<a href="https://codewithsadee.github.io/hoolix/"><strong>➥ Live Demo</strong></a>
